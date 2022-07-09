@@ -1,3 +1,2 @@
 # Caesar-Cipher-Python
-Implementation of Caesar cypher in python.
-
+Caesar cypher implemented in python.
