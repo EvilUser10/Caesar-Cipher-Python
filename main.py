@@ -3,17 +3,12 @@
 from string import ascii_lowercase
 
 
-def user_values():
+def user_values(palabra, cambio):
     abecedario = list(ascii_lowercase)
     vacio = ""
-
-    print("Introduce your phrase: ")
-    palabra = str(input())
     if type(palabra) != str:
         return "Invalid type, must be a string."
 
-    print("How many numbers would you like to rotate?")
-    cambio = input()
     if cambio.isdigit() == False:
         return "Invalid type, must be an integer."
     cambio = int(cambio)
@@ -31,7 +26,15 @@ def user_values():
             else:
                 vacio += abecedario[posicion_nueva]
         else: #In case character is not in alphabet.
-            vacio += letra 
+            vacio += letra
     return vacio
 
-print(user_values())
+
+if __name__ == "__main__":
+    print("Introduce your phrase: ")
+    word = str(input())
+
+    print("How many numbers would you like to rotate?")
+    letter_move = input()
+
+    print(user_values(word, letter_move))
